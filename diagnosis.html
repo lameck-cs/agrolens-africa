@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroLens Africa - Diagnose</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="AgroLens Africa Logo" id="logo">
+    <h1>AgroLens Africa</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="risk.html">Risk Forecast</a>
+</nav>
+
+<div class="diagnosis-container">
+    <div class="left-column">
+        <h3>Upload or Capture Plant Image</h3>
+        <input type="file" id="imageInput" accept="image/*">
+        <div style="display: flex; gap: 10px; width: 100%;">
+            <button id="cameraBtn" style="flex: 1;">Use Camera</button>
+            <button id="stopCameraBtn" style="flex: 1; background-color: #c0392b; display: none;">Stop Camera</button>
+        </div>
+        <video id="camera" style="display:none;" autoplay playsinline></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <img id="preview" src="" alt="Plant Preview" style="display:none;">
+        <button id="identifyBtn" style="width:100%; margin-top:15px; background-color: #1b5e20;">Identify Plant</button>
+    </div>
+
+    <div class="right-column">
+        <h3>Analysis Result (Matokeo)</h3>
+        <div id="plantName">
+            <p style="color:#777; font-style:italic;">
+                Upload an image and click "Identify Plant" to see the diagnosis here.
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 AgroLens Africa
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

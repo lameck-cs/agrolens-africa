@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroLens Africa - Risk Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+    <img src="logo.png" alt="AgroLens Africa Logo" id="logo">
+    <h1>AgroLens Africa</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="diagnosis.html">Diagnose Plants</a>
+</nav>
+<div class="diagnosis-container">
+    <div class="left-column">
+        <h3>Predict Disease Outbreaks</h3>
+        <p>Enter crop and county (optional) for localized risks.</p>
+        
+        <label style="display:block; margin-bottom:5px;"><strong>Crop Name:</strong></label>
+        <input type="text" id="cropInput" placeholder="e.g. Maize, Tomato">
+        
+        <label style="display:block; margin-top:15px; margin-bottom:5px;"><strong>County (Optional):</strong></label>
+        <input type="text" id="countyInput" placeholder="e.g. Uasin Gishu, Kiambu">
+        
+        <button id="predictBtn" style="width:100%; background-color: #e67e22; margin-top:20px;">Analyze Risk 📊</button>
+        
+        <div id="loading" style="display:none; text-align:center; margin-top:20px; color:#555;">
+            <p>⏳ Analyzing climate patterns...</p>
+        </div>
+    </div>
+    
+    <div class="right-column">
+        <h3>Risk Analysis Result (Utabiri)</h3>
+        <div class="chart-wrapper" style="display:none;">
+            <canvas id="riskChart"></canvas>
+        </div>
+        <div id="riskResult"><p style="color:#777; font-style:italic;">Results will appear here.</p></div>
+    </div>
+</div>
+<footer>&copy; 2026 AgroLens Africa</footer>
+<script src="risk_script.js"></script>
+</body>
+</html>

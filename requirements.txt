@@ -1,0 +1,9 @@
+flask
+flask-cors
+google-genai
+wikipedia
+beautifulsoup4
+requests
+gunicorn
+
+This now absolutely works with everything incorporated with API,forecast,diagnosis and months and regions in the forecast data.
